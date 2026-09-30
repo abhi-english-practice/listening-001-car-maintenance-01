@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POP DOSSIER - Daily Dictation Shadowing</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#fff7ef;
+    color:#333;
+}
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+.header{
+    background:#5b3a29;
+    color:white;
+    padding:16px;
+    border-radius:20px;
+    text-align:center;
+}
+.header h1{
+    font-size:24px;
+    margin:5px;
+}
+.header h2{
+    font-size:18px;
+    margin:5px;
+}
+.header p{
+    font-size:14px;
+    margin:5px;
+}
+.card{
+    background:white;
+    margin-top:20px;
+    padding:25px;
+    border-radius:24px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+button{
+    background:#d97745;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    border-radius:20px;
+    cursor:pointer;
+    margin:5px;
+}
+.chunk{
+    font-weight:bold;
+    color:#9a4d00;
+    cursor:pointer;
+    border-bottom:2px dotted #d97745;
+}
+.meaning{
+    display:none;
+    background:#fff8dc;
+    padding:14px;
+    margin:10px 0 18px 0;
+    border-radius:14px;
+    line-height:1.7;
+}
+.meaning b{
+    display:inline-block;
+    margin-top:8px;
+}
+.example{
+    margin-top:16px;
+    padding:14px 0;
+    border-top:2px dashed #d97745;
+    line-height:1.8;
+}
+.example + .example{
+    margin-top:18px;
+    padding-top:18px;
+    border-top:2px dashed #d97745;
+}
+.hidden{
+    display:none;
+}
+.line{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    font-size:18px;
+}
+.highlight{
+    background:#fff0c2;
+    padding:2px 6px;
+    border-radius:6px;
+}
+.link{
+    color:#9a4d00;
+    font-weight:bold;
+}
+input{
+    width:95%;
+    padding:12px;
+    border-radius:12px;
+    border:1px solid #ccc;
+    font-size:18px;
+}
+.correct{color:green;font-weight:bold}
+.wrong{color:red;font-weight:bold}
+ 
+.step-image{
+    width:100%;
+    border-radius:20px;
+    margin-top:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<div class="header">
+<h1>LISTENING PRACTICE</h1>
+<h2>Daily Dictation Shadowing</h2>
+
+</div>
+
+<div class="card">
+<h2>🚗 Context</h2>
+<p>
+You receive a reminder call from an auto service centre about your car maintenance appointment.
+</p>
+<audio controls style="width:100%">
+<source src="./0-short-talk-185.mp3" type="audio/mpeg">
+<p>Your browser does not support audio. Please check that 0-short-talk-185.mp3 is in the same folder as this HTML file.</p>
+</audio>
+</div>
+
+<div class="card">
+<h2>Step 1 - Listening Practice</h2>
+<p>Listen carefully. Focus on linking sounds, connected speech and key chunks.</p>
+<img class="step-image" src="step1_linking_pronunciation.png" alt="Linking pronunciation practice">
+</div>
+
+<div class="card">
+<h2>Step 2 - Dictation Practice</h2>
+<p>Type what you hear.</p>
+
+<button onclick="showAnswer()">Show Model Answer</button>
+
+<div id="answer" class="hidden">
+<p><b>Full Transcript:</b></p>
+<p>
+Hi, this is Greg from Easy Ride Auto Service.<br><br>
+I wanted to remind you that your car is due for a routine maintenance check next week.<br><br>
+We'll be checking the oil, brakes, and tire pressure to make sure everything's in top shape.<br><br>
+It usually takes about an hour, and you're welcome to wait in our lounge or drop off the car and pick it up later in the day.<br><br>
+If you'd like to add any extra services, like a tire rotation or air filter replacement, just let us know in advance.<br><br>
+Thanks for choosing Easy Ride, and we'll see you soon!
+</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Step 3 - Shadowing Chunks</h2>
+<p>Click on the bold collocations to see Vietnamese meanings.</p>
+<ul>
+<li><span class="chunk" onclick="toggleMeaning('m1')">be due for</span>
+<div id="m1" class="meaning">
+<b>Meaning:</b> đến hạn / đến thời điểm cần làm việc gì<br>
+<div class="example"><div class="example"><b>Example 1:</b> Your vehicle is <b>due for</b> a <b>safety inspection</b> next month.<br>
+<i>Xe của bạn đến hạn kiểm tra an toàn vào tháng tới.</i></div><br><br>
+<div class="example"><b>Example 2:</b> Many old buildings are <b>due for</b> <b>renovation</b> to improve <b>energy efficiency</b>.<br>
+<i>Nhiều tòa nhà cũ cần được cải tạo để nâng cao hiệu quả năng lượng.</i>
+</div></li>
+
+<li><span class="chunk" onclick="toggleMeaning('m2')">routine maintenance check</span>
+<div id="m2" class="meaning">
+<b>Meaning:</b> kiểm tra bảo dưỡng định kỳ<br>
+<div class="example"><div class="example"><b>Example 1:</b> Customers receive a <b>reminder</b> for their <b>routine maintenance check</b> every six months.<br>
+<i>Khách hàng nhận được lời nhắc kiểm tra bảo dưỡng định kỳ mỗi sáu tháng.</i><br><br>
+<div class="example"><b>Example 2:</b> <b>Regular maintenance checks</b> can reduce accidents caused by <b>mechanical failures</b>.<br>
+<i>Việc kiểm tra bảo dưỡng thường xuyên có thể giảm tai nạn do lỗi kỹ thuật.</i>
+</div></li>
+
+<li><span class="chunk" onclick="toggleMeaning('m3')">in top shape</span>
+<div id="m3" class="meaning">
+<b>Meaning:</b> trong tình trạng tốt nhất, hoạt động hoàn hảo<br>
+<div class="example"><div class="example"><b>Example 1:</b> The technician checked the engine to make sure it was in <b>top shape</b>.<br>
+<i>Kỹ thuật viên kiểm tra động cơ để đảm bảo nó hoạt động tốt.</i><br><br>
+<div class="example"><b>Example 2:</b> Regular exercise helps people stay in <b>top shape</b> both <b>physically and mentally</b>.<br>
+<i>Tập thể dục thường xuyên giúp con người duy trì thể chất và tinh thần tốt.</i>
+</div></li>
+
+<li><span class="chunk" onclick="toggleMeaning('m4')">drop off the car</span>
+<div id="m4" class="meaning">
+<b>Meaning:</b> để xe lại trung tâm sửa chữa<br>
+<div class="example"><div class="example"><b>Example 1:</b> You can <b>drop off the car</b> in the morning and <b>pick it up</b> after work.<br>
+<i>Bạn có thể để xe vào buổi sáng và nhận lại sau giờ làm.</i><br><br>
+<div class="example"><b>Example 2:</b> Some people prefer services that allow them to <b>drop off</b> their items and <b>collect them later</b>.<br>
+<i>Một số người thích dịch vụ cho phép họ gửi đồ và nhận lại sau.</i>
+</div></li>
+
+<li><span class="chunk" onclick="toggleMeaning('m5')">let us know in advance</span>
+<div id="m5" class="meaning">
+<b>Meaning:</b> báo cho chúng tôi trước<br>
+<div class="example"><div class="example"><b>Example 1:</b> Please <b>let us know in advance</b> if you need to <b>change your appointment</b>.<br>
+<i>Vui lòng báo trước nếu bạn cần thay đổi lịch hẹn.</i><br><br>
+<div class="example"><b>Example 2:</b> Travellers should inform <b>local authorities</b> <b>in advance</b> when visiting <b>restricted areas</b>.<br>
+<i>Du khách nên thông báo trước khi đến khu vực hạn chế.</i>
+</div></li>
+
+<li><span class="chunk" onclick="toggleMeaning('m6')">add any extra services</span>
+<div id="m6" class="meaning">
+<b>Meaning:</b> thêm các dịch vụ bổ sung<br>
+<div class="example"><div class="example"><b>Example 1:</b> Customers can <b>add extra services</b> such as <b>cleaning</b> or <b>tire replacement</b>.<br>
+<i>Khách hàng có thể thêm các dịch vụ như vệ sinh hoặc thay lốp.</i><br><br>
+<div class="example"><b>Example 2:</b> Companies often provide <b>additional services</b> to improve <b>customer satisfaction</b>.<br>
+<i>Các công ty thường cung cấp dịch vụ bổ sung để nâng cao sự hài lòng của khách hàng.</i>
+</div></li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Step 4 - Speaking Shadow Challenge</h2>
+<p>
+Record yourself reading the talk. Focus on:
+</p>
+<ul>
+<li>linking sounds</li>
+<li>sentence stress</li>
+<li>natural speed</li>
+<li>intonation</li>
+</ul>
+</div>
+
+</div>
+
+<script>
+function showAnswer(){
+ document.getElementById("answer").classList.toggle("hidden");
+}
+function toggleMeaning(id){
+ let x=document.getElementById(id);
+ if(x.style.display==="block"){
+   x.style.display="none";
+ }else{
+   x.style.display="block";
+ }
+}
+</script>
+
+</body>
+</html>
